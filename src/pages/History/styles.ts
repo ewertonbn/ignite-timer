@@ -83,3 +83,33 @@ export const Status = styled.span<StatusProps>`
     background: ${(props) => props.theme[STATUS_COLORS[props.variant]]};
   }
 `
+
+export const Pagination = styled.footer`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+
+  span {
+    margin-right: 1.25rem;
+    font-size: 0.875rem;
+  }
+`
+
+export const PaginationButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 6px;
+  color: ${(props) => props.theme['gray-100']};
+  background-color: ${(props) => props.theme['gray-600']};
+  border: 1px solid ${(props) => props.theme['gray-500']};
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+`
