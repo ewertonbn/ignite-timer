@@ -1,11 +1,20 @@
+import { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
-import { Scroll, Timer } from 'phosphor-react'
+import { MoonStars, Scroll, Sun, Timer } from 'phosphor-react'
 
 import logoIgniteImg from '../../assets/logo-ignite.svg'
+import { ThemeContext } from '../../context/ThemeContext'
 
-import { HeaderContainer } from './styles'
+import { HeaderContainer, ThemeSwitch } from './styles'
 
 export function Header() {
+  const { selectedTheme, changeTheme } = useContext(ThemeContext)
+
+  // function handleThemeChange(event: MouseEventHandler<HTMLButtonElement>) {
+  //   // console.log(event)
+  //   themeChange(event)
+  // }
+
   return (
     <HeaderContainer>
       <img src={logoIgniteImg} alt="" />
@@ -16,6 +25,18 @@ export function Header() {
         <NavLink to="/history" title="Histórico">
           <Scroll size={24} />
         </NavLink>
+        <ThemeSwitch
+          type="button"
+          onClick={changeTheme}
+          aria-label="Alterar tema"
+          title="Alterar tema"
+        >
+          {selectedTheme === 'dark' ? (
+            <Sun size={24} />
+          ) : (
+            <MoonStars size={24} />
+          )}
+        </ThemeSwitch>
       </nav>
     </HeaderContainer>
   )

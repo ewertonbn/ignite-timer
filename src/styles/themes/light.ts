@@ -1,12 +1,12 @@
-export const defaultTheme = {
-  bgColor: '#121214',
-  boxColor: '#202024',
-  boxColorSecondary: '#29292E',
+export const lightTheme = {
+  bgColor: '#54B397',
+  boxColor: '#EAF6F2',
+  textColor: '#323238',
+  boxColorSecondary: '#DAE6E2',
   placeholderColor: '#7C7C8A',
-  paginationColor: '#E1E1E6',
-  tableRowColor: '#29292E',
-  tableBorderColor: '#202024',
-  textColor: '#E1E1E6',
+  paginationColor: '#FFFFFF',
+  tableRowColor: '#C6F0E2',
+  tableBorderColor: '#EAF6F2',
   white: '#FFF',
 
   'gray-100': '#E1E1E6',
@@ -16,7 +16,7 @@ export const defaultTheme = {
   'gray-600': '#323238',
   'gray-700': '#29292E',
   'gray-800': '#202024',
-  'gray-900': '#121214',
+  'gray-900': '#fff',
 
   'green-300': '#00B37E',
   'green-500': '#00875F',

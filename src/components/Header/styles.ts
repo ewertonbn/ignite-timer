@@ -17,7 +17,7 @@ export const HeaderContainer = styled.header`
       align-items: center;
       justify-content: center;
 
-      color: ${(props) => props.theme['gray-100']};
+      color: ${(props) => props.theme.textColor};
 
       border-top: 3px solid transparent;
       border-bottom: 3px solid transparent;
@@ -33,4 +33,16 @@ export const HeaderContainer = styled.header`
       }
     }
   }
+`
+
+export const ThemeSwitch = styled.button`
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  color: ${(props) => props.theme.textColor};
+  cursor: pointer;
 `
