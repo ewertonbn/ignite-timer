@@ -88,16 +88,36 @@ export function History() {
         <span>
           Página {page} de {totalPages}
         </span>
-        <PaginationButton onClick={goToFirstPage} disabled={page === 1}>
+        <PaginationButton
+          onClick={goToFirstPage}
+          disabled={page === 1}
+          aria-label="Ir para primeira página"
+          title="Ir para primeira página"
+        >
           <CaretDoubleLeft size={16} />
         </PaginationButton>
-        <PaginationButton onClick={goToPreviousPage} disabled={page === 1}>
+        <PaginationButton
+          onClick={goToPreviousPage}
+          disabled={page === 1}
+          aria-label="Voltar uma página"
+          title="Voltar uma página"
+        >
           <CaretLeft size={16} />
         </PaginationButton>
-        <PaginationButton onClick={goToNextPage} disabled={page === totalPages}>
+        <PaginationButton
+          onClick={goToNextPage}
+          disabled={page === totalPages}
+          aria-label="Avançar uma página"
+          title="Avançar uma página"
+        >
           <CaretRight size={16} />
         </PaginationButton>
-        <PaginationButton onClick={goToLastPage} disabled={page === totalPages}>
+        <PaginationButton
+          onClick={goToLastPage}
+          disabled={page === totalPages}
+          aria-label="Ir para última página"
+          title="Ir para última página"
+        >
           <CaretDoubleRight size={16} />
         </PaginationButton>
       </Pagination>
