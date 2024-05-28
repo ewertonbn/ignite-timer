@@ -10,11 +10,6 @@ import { HeaderContainer, ThemeSwitch } from './styles'
 export function Header() {
   const { selectedTheme, changeTheme } = useContext(ThemeContext)
 
-  // function handleThemeChange(event: MouseEventHandler<HTMLButtonElement>) {
-  //   // console.log(event)
-  //   themeChange(event)
-  // }
-
   return (
     <HeaderContainer>
       <img src={logoIgniteImg} alt="" />

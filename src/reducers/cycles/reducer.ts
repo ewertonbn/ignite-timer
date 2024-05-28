@@ -76,6 +76,8 @@ export function cyclesReducer(state: CyclesState, action: ActionTypesProps) {
         return state
       }
 
+      new Audio('/notification.mp3').play()
+
       return produce(state, (draft) => {
         draft.activeCycleId = null
         draft.cycles[currentCycleIndex].finishedDate = new Date()

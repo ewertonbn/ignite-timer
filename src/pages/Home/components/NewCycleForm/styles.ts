@@ -10,10 +10,16 @@ export const FormContainer = styled.div`
   font-size: 1.125rem;
   font-weight: bold;
   flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 `
 
 const BaseInput = styled.input`
   background: transparent;
+  width: 85%;
   height: 2.5rem;
   border: 0;
   border-bottom: 2px solid ${(props) => props.theme['gray-500']};
@@ -29,6 +35,10 @@ const BaseInput = styled.input`
 
   &::placeholder {
     color: ${(props) => props.theme.placeholderColor};
+  }
+
+  @media (min-width: 768px) {
+    width: fit-content;
   }
 `
 
