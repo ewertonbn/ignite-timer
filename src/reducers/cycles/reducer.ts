@@ -50,6 +50,8 @@ export function cyclesReducer(state: CyclesState, action: ActionTypesProps) {
         return state
       }
 
+      document.title = `Ignite Timer`
+
       return produce(state, (draft) => {
         draft.activeCycleId = null
         draft.cycles[currentCycleIndex].interruptedDate = new Date()
@@ -77,6 +79,7 @@ export function cyclesReducer(state: CyclesState, action: ActionTypesProps) {
       }
 
       new Audio('/notification.mp3').play()
+      document.title = `Ignite Timer`
 
       return produce(state, (draft) => {
         draft.activeCycleId = null
