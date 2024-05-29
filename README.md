@@ -1,6 +1,5 @@
-<p align="center" style="display:flex;justify-content:center;align-items:center;gap:10px;"> 
+<p align="center"> 
   <img src="./public/logo-ignite.svg" />
-  Ignite Timer
 </p>
 
 <p align="center">
