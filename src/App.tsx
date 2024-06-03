@@ -1,7 +1,7 @@
 import { BrowserRouter } from 'react-router-dom'
 
-import { CyclesContextProvider } from './context/CyclesContext'
 import { ThemeContextProvider } from './context/ThemeContext'
+import { CyclesContextProvider } from './hooks/useCycles'
 import { GlobalStyle } from './styles/global'
 import { Router } from './Router'
 

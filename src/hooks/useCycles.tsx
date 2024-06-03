@@ -1,6 +1,7 @@
 import {
   createContext,
   ReactNode,
+  useContext,
   useEffect,
   useReducer,
   useState,
@@ -96,10 +97,13 @@ export function CyclesContextProvider({
 
   function interruptCurrentCycle() {
     dispatch(interruptCurrentCycleAction())
+    document.title = `Ignite Timer`
   }
 
   function markCurrentCycleAsFinished() {
     dispatch(markCurrentCycleAsFinishedAction())
+    new Audio('/notification.mp3').play()
+    document.title = `Ignite Timer`
   }
 
   return (
@@ -118,4 +122,11 @@ export function CyclesContextProvider({
       {children}
     </CyclesContext.Provider>
   )
+}
+
+// eslint-disable-next-line react-refresh/only-export-components
+export function useCycles() {
+  const context = useContext(CyclesContext)
+
+  return context
 }

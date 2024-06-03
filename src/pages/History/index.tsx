@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useState } from 'react'
 import { formatDistanceToNow } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 import {
@@ -8,7 +8,7 @@ import {
   CaretRight,
 } from 'phosphor-react'
 
-import { CyclesContext } from '../../context/CyclesContext'
+import { useCycles } from '../../hooks/useCycles'
 
 import {
   HistoryContainer,
@@ -20,7 +20,7 @@ import {
 
 export function History() {
   const [page, setPage] = useState(1)
-  const { cycles } = useContext(CyclesContext)
+  const { cycles } = useCycles()
 
   const totalPages = Math.ceil(cycles.length / 6)
 
